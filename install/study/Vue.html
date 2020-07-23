@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>钩子函数 | 欢迎来到老徐的知识世界</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/img/11.jpg">
+    <meta name="description" content="老徐的博客">
+    <link rel="preload" href="/assets/css/0.styles.7daac5a6.css" as="style"><link rel="preload" href="/assets/js/app.7bb3b611.js" as="script"><link rel="preload" href="/assets/js/2.5334ac87.js" as="script"><link rel="preload" href="/assets/js/10.7520fc38.js" as="script"><link rel="prefetch" href="/assets/js/11.c45b111a.js"><link rel="prefetch" href="/assets/js/12.c833d193.js"><link rel="prefetch" href="/assets/js/3.b79c394b.js"><link rel="prefetch" href="/assets/js/4.dd59ff24.js"><link rel="prefetch" href="/assets/js/5.2be13645.js"><link rel="prefetch" href="/assets/js/6.beabc577.js"><link rel="prefetch" href="/assets/js/7.a8a5172f.js"><link rel="prefetch" href="/assets/js/8.632644dd.js"><link rel="prefetch" href="/assets/js/9.67001066.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7daac5a6.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">欢迎来到老徐的知识世界</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/laoxusimida/laoxusimida.github.io.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://baidu.com" target="_self" rel="" class="nav-link external">
+  百度
+  <!----></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习工具" class="dropdown-title"><span class="title">学习工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://element.eleme.cn/#/zh-CN/component/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  element-ui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/guide/assets.html#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  loadsh
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  中文
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="https://github.com/laoxusimida/laoxusimida.github.io.git" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://baidu.com" target="_self" rel="" class="nav-link external">
+  百度
+  <!----></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="学习工具" class="dropdown-title"><span class="title">学习工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vue官网
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://element.eleme.cn/#/zh-CN/component/timeline" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  element-ui
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.vuepress.cn/guide/assets.html#%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuePress
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://www.lodashjs.com/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  loadsh
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Language Menu" class="dropdown-title"><span class="title">language</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/language/chinese/" class="nav-link">
+  中文
+</a></li><li class="dropdown-item"><!----> <a href="/language/japanese/" class="nav-link">
+  Japanese
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>学习内容</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/install/study/javascript.html" class="sidebar-link">Javascript</a></li><li><a href="/install/study/Vue.html" aria-current="page" class="active sidebar-link">Vue</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/install/study/Vue.html#封装-button" class="sidebar-link">封装 button</a></li><li class="sidebar-sub-header"><a href="/install/study/Vue.html#vue-cli-打包一-ui-库" class="sidebar-link">vue-cli 打包一 ui 库</a></li><li class="sidebar-sub-header"><a href="/install/study/Vue.html#发布到-npm-中" class="sidebar-link">发布到 npm 中</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="钩子函数"><a href="#钩子函数" class="header-anchor">#</a> 钩子函数</h3> <p><img src="/img/%E9%92%A9%E5%AD%90%E5%87%BD%E6%95%B0.png" alt="生命周期11个钩子函数"></p> <h3 id="keep-alive的使用"><a href="#keep-alive的使用" class="header-anchor">#</a> keep-alive的使用</h3> <p><img src="/img/keep-alive%E7%9A%84%E4%BD%BF%E7%94%A8.png" alt="keep-alive是暂存组件不被销毁从而提高性能的方法"></p> <h3 id="cookie与token的区别"><a href="#cookie与token的区别" class="header-anchor">#</a> cookie与token的区别</h3> <p><img src="/img/token.jpg" alt="token请求"> <img src="/img/cookie.png" alt="cookie请求"></p> <h3 id="搭建vue脚手架"><a href="#搭建vue脚手架" class="header-anchor">#</a> 搭建Vue脚手架</h3> <p><img src="/img/%E6%90%AD%E5%BB%BAVue%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6.jpg" alt="脚手架"></p> <h3 id="将id作为属性名对应不同的属性值，多应用与相同样式不同属性"><a href="#将id作为属性名对应不同的属性值，多应用与相同样式不同属性" class="header-anchor">#</a> 将id作为属性名对应不同的属性值，多应用与相同样式不同属性</h3> <p><img src="/img/shuxing.jpg" alt="token请求"></p> <h3 id="row上边线问题根据条件判断"><a href="#row上边线问题根据条件判断" class="header-anchor">#</a> row上边线问题根据条件判断</h3> <p><img src="/img/row%E4%B8%8A%E8%BE%B9%E7%BA%BF.png" alt="row上边线"></p> <h3 id="运用json深克隆"><a href="#运用json深克隆" class="header-anchor">#</a> 运用Json深克隆</h3> <p><img src="/img/%E6%B7%B1%E5%85%8B%E9%9A%861.png" alt="深克隆"></p> <h3 id="时间处理格式"><a href="#时间处理格式" class="header-anchor">#</a> 时间处理格式</h3> <p><img src="/img/%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E6%A0%BC%E5%BC%8F.png" alt="时间"></p> <h3 id="组件中使用v-model-v-bind-attrs-v-on-input的基本原理"><a href="#组件中使用v-model-v-bind-attrs-v-on-input的基本原理" class="header-anchor">#</a> 组件中使用v-model=v-bind=$attrs+v-on:input的基本原理</h3> <p><img src="/img/v-model.png" alt="v-model在组件的使用"></p> <h3 id="组件中使用v-model的基本原理-v-bind-attrs"><a href="#组件中使用v-model的基本原理-v-bind-attrs" class="header-anchor">#</a> 组件中使用v-model的基本原理--v-bind=$attrs</h3> <p><img src="/img/%E5%AD%90%E7%BB%84%E4%BB%B6%E6%8E%A5%E6%94%B6%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E7%9A%84%E5%80%BC.png" alt="v-model在组件的使用"></p> <h3 id="组件中使用v-model的基本原理-v-on-input"><a href="#组件中使用v-model的基本原理-v-on-input" class="header-anchor">#</a> 组件中使用v-model的基本原理--v-on:input</h3> <p><img src="/img/%E5%AD%90%E7%BB%84%E4%BB%B6%E5%90%91%E7%88%B6%E7%BB%84%E4%BB%B6%E4%BC%A0%E9%80%92%E4%BA%8B%E4%BB%B6%E4%BB%A5%E5%8F%8A%E6%95%B0%E6%8D%AE.png" alt="v-model在组件的使用"></p> <h3 id="自定义v-model配置"><a href="#自定义v-model配置" class="header-anchor">#</a> 自定义v-model配置</h3> <p>使用model对组件进行配置model有prop和event构成input输入框是
+prop:value event: input 可以更改比如checkbox prop:checked event:change
+props对value进行数据上的配置要求，对change要求类型以及默认值
+<img src="/img/v-model%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE.png" alt="v-model的自定义配置"></p> <h3 id="注册ui库"><a href="#注册ui库" class="header-anchor">#</a> 注册ui库</h3> <h1 id="myui"><a href="#myui" class="header-anchor">#</a> myui</h1> <h2 id="封装-button"><a href="#封装-button" class="header-anchor">#</a> 封装 button</h2> <h3 id="初步封装-button-组件"><a href="#初步封装-button-组件" class="header-anchor">#</a> 初步封装 button 组件</h3> <ol><li>在 components 目录中创建一个 Button.vue 组件</li> <li>在 main.js 中引入注册为全局组件<div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 引入Button组件并且注册为全局组件</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./components/Button.vue'</span>
+<span class="token comment">// 注册为全局组件</span>
+Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'kl-button'</span><span class="token punctuation">,</span> Button<span class="token punctuation">)</span>
+</code></pre></div></li></ol> <h3 id="使用插件来封装"><a href="#使用插件来封装" class="header-anchor">#</a> 使用插件来封装</h3> <ol><li><p>在 components 目录中定义插件 js 的配置项</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 引入vue组件</span>
+<span class="token comment">// 引入Button组件并且注册为全局组件</span>
+<span class="token keyword">import</span> Button <span class="token keyword">from</span> <span class="token string">'./Button.vue'</span>
+
+<span class="token comment">// 定义install方法为了定义插件</span>
+<span class="token keyword">function</span> <span class="token function">install</span><span class="token punctuation">(</span><span class="token parameter">Vue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 判断插件是否安装等等 这里省略</span>
+  <span class="token comment">// 注册为全局组件</span>
+  <span class="token comment">// Vue.component('kl-button', Button)</span>
+  Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span>Button<span class="token punctuation">.</span>name<span class="token punctuation">,</span> Button<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  install
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>在 main.js 中通过 Vue.use 注册一个 ui 插件</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 引入自己的ui库</span>
+<span class="token keyword">import</span> KLui <span class="token keyword">from</span> <span class="token string">'./components/index.js'</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>KLui<span class="token punctuation">)</span> <span class="token comment">// 调用install方法</span>
+</code></pre></div><ol><li>如果在node-module中打包，需要将index.js注册组件的路径更改，否则不能正常引入。
+4、注意需要给与入口文件  在script中配置&quot;main&quot;:'../lib/commponent/index.js'</li></ol></li></ol> <h2 id="vue-cli-打包一-ui-库"><a href="#vue-cli-打包一-ui-库" class="header-anchor">#</a> vue-cli 打包一 ui 库</h2> <ol><li><p>在 package.json 的 scripts 中配置打包任务</p> <div class="language- extra-class"><pre class="language-text"><code>&quot;build:lib&quot;: &quot;vue-cli-service build --target lib --name klxin-ui --dest lib src/components/index.js&quot;
+</code></pre></div></li> <li><p>解释</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// --target lib 当前以UI库的方式打包 libary</span>
+<span class="token comment">// --name klxin-ui 名</span>
+<span class="token comment">// --dest lib 打包输出到lib文件夹中</span>
+<span class="token comment">// src/components/index.js 打包的入口文件</span>
+</code></pre></div></li> <li><p>执行<code>npm run build:lib</code></p></li></ol> <h2 id="发布到-npm-中"><a href="#发布到-npm-中" class="header-anchor">#</a> 发布到 npm 中</h2> <ol><li><p>npm 注册账号</p></li> <li><p>发包</p> <ul><li>第一次发布包：
+在终端输入 npm adduser，提示输入账号，密码和邮箱，然后将提示创建成功</li> <li>非第一次发布包：
+在终端输入 npm login，然后输入你创建的账号和密码，和邮箱，登陆</li></ul></li> <li><p><strong>注意</strong> npm adduser 成功的时候默认你已经登陆了，所以不需要再接着 npm login.</p></li></ol> <h3 id="keep-alive"><a href="#keep-alive" class="header-anchor">#</a> keep-alive</h3> <h4 id="理解："><a href="#理解：" class="header-anchor">#</a> 理解：</h4> <div class="language- extra-class"><pre><code>比如常见tab栏切换以及menu栏频繁切换，切换时组件都会经历一次生命周期，这样频繁切换会造成性能上巨大
+的浪费，所以使用keep-alive使得组件避免销毁缓存下来，大大提高性能。
+</code></pre></div><h3 id="组件通信"><a href="#组件通信" class="header-anchor">#</a> 组件通信</h3> <h4 id="理解"><a href="#理解" class="header-anchor">#</a> 理解:</h4> <div class="language- extra-class"><pre><code>  1、父子之间通信
+  2、非父子 事件中心（事件总线）
+  3、provide和inject （跨代传值）
+  4、$parent和$children以及$root （应急情况下使用，不推荐）
+  5、 $refs 在普通dom中指的是获取dom元素  而组件中获取的是组件的实例
+  6、 $attrs  是在父子传值时2不需要用props获取可以直接获取到$attrs  可以在子组件中打印出来
+  7、 vuex
+</code></pre></div><h3 id="混入的认识"><a href="#混入的认识" class="header-anchor">#</a> 混入的认识</h3> <p><img src="/img/%E6%B7%B7%E5%85%A5.png" alt="混入的认识"></p> <h4 id="vue项目优化"><a href="#vue项目优化" class="header-anchor">#</a> vue项目优化</h4> <div class="language- extra-class"><pre><code>  1、使用两个不同的打包入口文件区分生产环境production和开发环境development
+  2、使用external去忽略你所需要的项然后引用外部CDN资源
+  3、引用html插件区分生产环境和开发环境判断是否引入外部cdn
+  4、使用路由懒觉按需加载路由
+</code></pre></div><h4 id="反向代理"><a href="#反向代理" class="header-anchor">#</a> 反向代理</h4> <p>如果你的前端地址和请求地址不是同一个主机时，需要在后端设置cors
+也可以在前端vue.config.js设置devServe.proxy
+需要时可以设置devServer的相关配置
+<img src="/img/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.png" alt="反向代理"></p> <h4 id="vue原理数据的渲染初步认识"><a href="#vue原理数据的渲染初步认识" class="header-anchor">#</a> vue原理数据的渲染初步认识</h4> <p><img src="/img/vue%E5%8E%9F%E7%90%86.png" alt="vue原理"> <img src="/img/vue%E5%8E%9F%E7%90%861.png" alt="vue原理"></p> <h4 id="vuex与localstorage区别"><a href="#vuex与localstorage区别" class="header-anchor">#</a> vuex与localStorage区别</h4> <div class="language- extra-class"><pre><code>  1、vuex是响应时
+  2、 localStorage是持久存储不销毁，vuex刷新即销毁
+</code></pre></div><h4 id="vue数据劫持原理-深度劫持"><a href="#vue数据劫持原理-深度劫持" class="header-anchor">#</a> vue数据劫持原理(深度劫持)</h4> <p><img src="/img/%E6%95%B0%E6%8D%AE%E5%8A%AB%E6%8C%811.png" alt="vue数据劫持"> <img src="/img/%E6%95%B0%E6%8D%AE%E5%8A%AB%E6%8C%812.png" alt="vue数据劫持"></p> <h3 id="mvvm定义"><a href="#mvvm定义" class="header-anchor">#</a> mvvm定义</h3> <div class="language- extra-class"><pre><code>  mvvm顾名思义M指的是后台传递的数据而v指的是视图也就是dom，而vm是一个视图
+  和数据建立关系的桥梁，后端数据转化为视图的方式为数据绑定，视图转化为数据为事件监听，
+  作为一个观察者，当数据发生变化时会通知视图更新，当视图发生变化时会通知数据发生变化
+  从而实现数据双向绑定
+</code></pre></div><h3 id="vue-js"><a href="#vue-js" class="header-anchor">#</a> vue.js</h3> <div class="language- extra-class"><pre><code>  vue是一个轻量级高性能的，易读懂的api，是一个数据驱动web界面的渐进式框架
+  结合组件形成数据与视图结构相分离的开发模式，核心是响应式的数据绑定系统。
+</code></pre></div><h3 id="vue的特点"><a href="#vue的特点" class="header-anchor">#</a> vue的特点</h3> <div class="language- extra-class"><pre><code>  可结合vue的定义来说，vue特点：响应式编程，组件化
+  优点：简单易学，轻量级，视图与数据结构相分离，组件化开发，虚拟dom，双向数据绑定
+</code></pre></div><h3 id="为什么data是一个函数"><a href="#为什么data是一个函数" class="header-anchor">#</a> 为什么data是一个函数</h3> <div class="language- extra-class"><pre><code>  data是一个引用数据类型，每次组件被重用时若为一个对象那么他的引用地址就会发生变化，
+  如果data数据发生变化，那么引用它的组件中的视图也会随之发生变化，所以使用返回对象的
+  方法那么每次返回的对象它们的引用地址都不一样，形成一个独立的作用域。
+</code></pre></div><h3 id="路由导航钩子有哪些？"><a href="#路由导航钩子有哪些？" class="header-anchor">#</a> 路由导航钩子有哪些？</h3> <div class="language- extra-class"><pre><code>  ①、
+  1全局路由导航钩子(路由导航守卫) beforeResolve和beforeEach具有相同作用
+  router.beforeEach(to,from,next)   next必须调用否则钩子函数无法resolved
+  2后置钩子
+  router.afterEach(to,from)
+  ②单独路由的导航钩子
+  beforeEnter(to,from)
+  ③组件内的路由钩子
+  beforeRouterEnter()   渲染之前被调用
+  beforeRouterUpdata()  更新时被调用
+  beforeRouterLeave()	导航离开组件时被调用
+</code></pre></div><h3 id="vm-nexttick"><a href="#vm-nexttick" class="header-anchor">#</a> vm.$nextTick()</h3> <div class="language- extra-class"><pre><code>  在数据发生变化时vue更新视图，在数据变化之后立即执行$nextTick()方法，
+  更新视图的回调函数执行在$nextTick方法内
+</code></pre></div><h3 id="promise对象"><a href="#promise对象" class="header-anchor">#</a> Promise对象</h3> <div class="language- extra-class"><pre><code>  Promise的提出是为了解决回调地狱问题，Promise对象处理未立即返回结果的
+  函数，是以解决异步操作的api
+  Promise特点：一旦状态发生变化那么将不会再改变,如果再向里添加回调函数也立即回得到这个结果
+  Promise有3个状态pending(进行中) fullfilled(成功) rejected(失败) 
+  只有pending-&gt;fullfilled和pending-&gt;rejected阶段
+  所以说Promise对象的状态不会受到外界影响，只有返回的结果才会决定状态，
+  所以说Promise只有返回了结果才知道发生在那个状态(是即将完成还是刚刚开始)
+  Promise对象有两个参数resolve(成功)和reject(失败)
+  生成实例时调用then方法可以处理resolve和reject两个状态的回调函数(必须要有)
+  catch方法可以没有，而且resolve和reject只执行一个
+</code></pre></div><h3 id="axios、fetch、jquery-ajax"><a href="#axios、fetch、jquery-ajax" class="header-anchor">#</a> axios、fetch、jquery(ajax)</h3> <div class="language- extra-class"><pre><code>  ① juqery(ajax)
+  1、jqeury中对原生ajax进行了封装比较好，但是还是不如axios，比如
+  在使用jquery封装的ajax需要引入庞大的jquery库，所以说非常笨重，
+  2、不符合现在主流的mvvm
+  3、配置和调用时比较混乱、而且原生ajax就比较配置时就比较复杂
+
+  ② axios
+  1、axios比较优秀、支持mvvm这是尤以溪强烈推荐的，
+  优点1、基于原生XHR从浏览器上配置
+  2、拦截请求和响应
+  3、防止csrf(跨站请求伪造)
+  4、支持Promise API
+  5、并行请求(多线程)
+  6、将数据转化为json格式
+
+  ③ fetch
+  并没有基于XHR而是原生js
+  所以说不用下载第三方包但是fetch无法捕获请求错误结果，只能在
+  网络请求错误时捕获，而且不能携带cookie
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/install/study/javascript.html" class="prev">
+        Javascript
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7bb3b611.js" defer></script><script src="/assets/js/2.5334ac87.js" defer></script><script src="/assets/js/10.7520fc38.js" defer></script>
+  </body>
+</html>
